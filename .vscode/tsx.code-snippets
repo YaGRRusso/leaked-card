@@ -1,0 +1,25 @@
+// https://code.visualstudio.com/docs/editor/userdefinedsnippets
+// DiretórioArquivo: ${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}
+// Diretório: ${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}
+// Arquivo: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}
+// Variáveis: ${1}, ${1:default}, ${1|one,two,three|}...
+
+{
+  "Create ReactJS Component": {
+    "scope": "typescriptreact",
+    "prefix": "reactcomp",
+    "body": [
+      "import { FC, HTMLAttributes } from 'react'",
+      "",
+      "export interface ${1:${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props extends HTMLAttributes<HTMLDivElement> {}",
+      "",
+      "export const ${1:${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}: FC<${1:${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props> = ({ children, ...rest }) => {",
+      "  return <div {...rest}>{children}</div>",
+      "}",
+      "",
+      "${1:${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}.displayName = '${1:${TM_DIRECTORY/.*[\\/\\\\](.*)/${1:/pascalcase}/}${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}'",
+      "",
+    ],
+    "description": "Create ReactJS component with all is necessary",
+  },
+}
