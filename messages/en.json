@@ -1,4 +1,6 @@
 {
+  "trustedSite": "Trusted site",
+  "trustedSiteDescription": "100% safe",
   "required": "Required field",
   "invalid": "Invalid value",
   "min": "The field did not reach the minimum character length",

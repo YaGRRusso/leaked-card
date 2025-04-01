@@ -1,4 +1,6 @@
 {
+  "trustedSite": "Site confiável",
+  "trustedSiteDescription": "100% seguro",
   "required": "Campo obrigatório",
   "invalid": "Valor inválido",
   "min": "O campo não atingiu o tamanho mínimo de caracteres",

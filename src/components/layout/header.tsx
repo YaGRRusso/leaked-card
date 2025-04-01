@@ -1,4 +1,4 @@
-import { CreditCard, MoonStars, Sun } from "@phosphor-icons/react"
+import { CreditCard, GithubLogo, MoonStars, Sun } from "@phosphor-icons/react"
 import { FC, HTMLAttributes } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -55,6 +55,14 @@ export const LayoutHeader: FC<LayoutHeaderProps> = ({ ...rest }) => {
               </option>
             ))}
           </select>
+
+          <a
+            href="https://github.com/YaGRRusso/leaked-card"
+            target="_blank"
+            className="btn btn-circle border-input btn-outline btn-xs"
+          >
+            <GithubLogo />
+          </a>
         </div>
       </div>
     </header>
