@@ -41,9 +41,10 @@ export type FormsCardSchemaProps = z.infer<typeof formSchema>
 export interface FormsCardProps extends FormHTMLAttributes<HTMLFormElement> {
   onFormSubmit?: (data?: FormsCardSchemaProps) => void
   onFormChange?: (data?: FormsCardSchemaProps) => void
+  onShouldFlip?: (shouldFlip: boolean) => void
 }
 
-export const FormsCard: FC<FormsCardProps> = ({ className, onFormChange, onFormSubmit, ...rest }) => {
+export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormChange, onFormSubmit, ...rest }) => {
   const { t } = useTranslation()
 
   const {
@@ -151,6 +152,8 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onFormChange, onFormS
           className="input w-full"
           placeholder={t("cardInfos.cardCvvPlaceholder")}
           value={mask(cardCvvMask, watch("cardCvv")).value}
+          onFocus={() => onShouldFlip?.(true)}
+          onBlur={() => onShouldFlip?.(false)}
           onChange={(ev) =>
             setValue("cardCvv", mask(cardCvvMask, ev.target.value).unmaskedValue, { shouldValidate: true })
           }

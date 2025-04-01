@@ -1,9 +1,8 @@
-import { X } from "@phosphor-icons/react"
 import { createFileRoute } from "@tanstack/react-router"
 import { useRef, useState } from "react"
-import { useTranslation } from "react-i18next"
 
 import { CommonCard } from "@/components/common/card"
+import { CommonDialog } from "@/components/common/dialog"
 import { CommonFlipper } from "@/components/common/flipper"
 import { FormsCard, FormsCardSchemaProps } from "@/components/forms/card"
 
@@ -12,7 +11,6 @@ export const Route = createFileRoute("/_layout/")({
 })
 
 function RouteComponent() {
-  const { t } = useTranslation()
   const [isFlipped, setIsFlipped] = useState(false)
   const [values, setValues] = useState<FormsCardSchemaProps>()
   const modalRef = useRef<HTMLDialogElement>(null)
@@ -32,28 +30,12 @@ function RouteComponent() {
         />
         <CommonCard.Back cvv={values?.cardCvv} />
       </CommonFlipper>
-      <FormsCard onFormSubmit={() => modalRef.current?.showModal()} onFormChange={setValues} />
-
-      <dialog ref={modalRef} className="modal">
-        <div className="modal-box">
-          <form method="dialog">
-            <button className="btn absolute top-2 right-2 btn-circle btn-ghost btn-sm">
-              <X />
-            </button>
-          </form>
-          <div className="flex items-center gap-2">
-            <h3 className="text-lg font-bold">{t("checkingCard")}</h3>
-            <span className="loading loading-xs loading-ring" />
-          </div>
-          <div className="flex flex-col items-center justify-center gap-4 py-2">
-            <span className="text-sm text-muted">{t("checkingCardDescription")}</span>
-            <progress className="progress w-full"></progress>
-          </div>
-        </div>
-        <form method="dialog" className="modal-backdrop">
-          <button />
-        </form>
-      </dialog>
+      <FormsCard
+        onFormSubmit={() => modalRef.current?.showModal()}
+        onFormChange={setValues}
+        onShouldFlip={setIsFlipped}
+      />
+      <CommonDialog ref={modalRef} />
     </div>
   )
 }
