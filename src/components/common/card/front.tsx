@@ -1,6 +1,7 @@
 import { CardBase } from "./base"
 
 import { FC, HTMLAttributes, useMemo } from "react"
+import { useTranslation } from "react-i18next"
 
 import americanexpress from "@/assets/americanexpress.svg"
 import chip from "@/assets/chip.svg"
@@ -12,15 +13,19 @@ import jcb from "@/assets/jcb.svg"
 import mastercard from "@/assets/mastercard.svg"
 import visa from "@/assets/visa.svg"
 import { CardBrand, getCardBrand } from "@/helpers/getCardBrand"
+import { mask } from "@/helpers/mask"
 import { cn } from "@/utils/cn"
 
 export interface CardFrontProps extends HTMLAttributes<HTMLDivElement> {
   number?: string
   name?: string
-  expiration?: string
+  expiryMonth?: string
+  expiryYear?: string
 }
 
-export const CardFront: FC<CardFrontProps> = ({ number, name, expiration, className, ...rest }) => {
+export const CardFront: FC<CardFrontProps> = ({ number, name, expiryMonth, expiryYear, className, ...rest }) => {
+  const { t } = useTranslation()
+
   const cardFlag = useMemo(() => {
     const brand = getCardBrand(number)
 
@@ -47,19 +52,23 @@ export const CardFront: FC<CardFrontProps> = ({ number, name, expiration, classN
   return (
     <CardBase className={cn("justify-between p-4", className)} {...rest}>
       <div className="flex items-center justify-between">
-        <div className="flex h-8 w-10 items-center justify-center overflow-hidden rounded bg-yellow-500">
-          <img src={chip} alt="chip" className="h-16 w-16 opacity-50" />
+        <div className="flex h-8 w-10 items-center justify-center overflow-hidden rounded bg-[#f0b100]">
+          <img src={chip} alt="chip" className="h-16 w-16 opacity-40" />
         </div>
         <div className="flex h-12 w-16 items-center justify-end">
-          {cardFlag ? <img src={cardFlag} alt="flag" /> : <div className="h-full w-full skeleton" />}
+          {cardFlag ? <img src={cardFlag} alt="flag" className="h-full" /> : <div className="h-full w-full skeleton" />}
         </div>
       </div>
-      <div className="text-2xl">
-        <span>•••• •••• •••• ••••</span>
+      <div className="text-xl sm:text-2xl">
+        <span>{mask({ mask: "0000 0000 0000 0000", lazy: false, placeholderChar: "•" }, number).value}</span>
       </div>
       <div className="flex items-center justify-between">
-        <span className="uppercase">Cardholder Name</span>
-        <span>••/••</span>
+        <span className="uppercase">{name || t("cardInfos.cardholderNamePlaceholder")}</span>
+        <span>
+          {expiryMonth || t("cardInfos.cardExpiryMonthPlaceholder")}
+          {"/"}
+          {expiryYear || t("cardInfos.cardExpiryYearPlaceholder")}
+        </span>
       </div>
     </CardBase>
   )

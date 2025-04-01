@@ -1,7 +1,28 @@
 {
+  "required": "Campo obrigatório",
+  "invalid": "Valor inválido",
+  "min": "O campo não atingiu o tamanho mínimo de caracteres",
+  "max": "O campo não pode exceder o tamanho máximo de caracteres",
+  "length": "O campo não atingiu o tamanho correto de caracteres",
+  "createdBy": "Criado por",
+  "changeLanguage": "Mudar idioma",
   "leakedCards": "Cartões Vazados",
   "leakedCardsDescription": "Verifique se o seu cartão foi vazado em uma violação de dados.",
-  "hello": "Olá Mundo",
-  "changeLanguage": "Mudar idioma",
-  "createdBy": "Criado por"
+  "checkingCard": "Verificando cartão",
+  "checkingCardDescription": "Estamos verificando se o seu cartão foi vazado em uma violação de dados. Isso pode levar alguns segundos...",
+  "cardInfos": {
+    "cardholderName": "Nome no cartão",
+    "cardholderNamePlaceholder": "Nome do Titular",
+    "cardNumber": "Número do cartão",
+    "cardNumberPlaceholder": "Número do cartão de crédito",
+    "cardCvv": "CVV do cartão",
+    "cardCvvPlaceholder": "CVV",
+    "cardExpiry": "Data de expiração do cartão",
+    "cardExpiryPlaceholder": "MM/AA",
+    "cardExpiryMonth": "Mês de expiração",
+    "cardExpiryMonthPlaceholder": "MM",
+    "cardExpiryYear": "Ano de expiração",
+    "cardExpiryYearPlaceholder": "YY",
+    "submit": "Verificar cartão"
+  }
 }
