@@ -1,3 +1,7 @@
 {
-  "hello": "Olá Mundo"
+  "leakedCards": "Cartões Vazados",
+  "leakedCardsDescription": "Verifique se o seu cartão foi vazado em uma violação de dados.",
+  "hello": "Olá Mundo",
+  "changeLanguage": "Mudar idioma",
+  "createdBy": "Criado por"
 }
