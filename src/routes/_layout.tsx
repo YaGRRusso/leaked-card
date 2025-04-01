@@ -9,12 +9,12 @@ export const Route = createFileRoute("/_layout")({
 
 function RouteComponent() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col">
       <LayoutHeader />
-      <div className="container flex-1">
+      <div className="container flex flex-1 flex-col">
         <Outlet />
       </div>
       <LayoutFooter />
-    </div>
+    </main>
   )
 }
