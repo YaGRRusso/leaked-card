@@ -10,21 +10,15 @@ export const LayoutShield: FC<LayoutShieldProps> = ({ className, ...rest }) => {
   const { t } = useTranslation()
 
   return (
-    <div className="fixed right-2 bottom-2 z-10">
+    <div className={cn("fixed right-2 bottom-2 z-10", className)} {...rest}>
       <div className="max-sm:tooltip max-sm:tooltip-left">
         <div className="tooltip-content sm:hidden">
           <div className="flex flex-col">
             <span className="font-medium">{t("trustedSite")}</span>
-            <span className="font-light text-muted">{t("trustedSiteDescription")}</span>
+            <span className="font-light">{t("trustedSiteDescription")}</span>
           </div>
         </div>
-        <div
-          className={cn(
-            "flex flex-1 items-center justify-end gap-2 rounded text-xs transition-all hover:opacity-100 max-xl:opacity-40 sm:bg-base-200 sm:p-2",
-            className,
-          )}
-          {...rest}
-        >
+        <div className="flex flex-1 items-center justify-end gap-2 rounded text-xs transition-all hover:opacity-100 max-xl:opacity-40 sm:bg-base-200 sm:p-2">
           <ShieldCheck size={32} weight="fill" className="text-success" />
           <div className="hidden flex-col sm:flex">
             <span className="font-medium">{t("trustedSite")}</span>
