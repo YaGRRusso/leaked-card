@@ -1,4 +1,5 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router"
+import { createFileRoute, Outlet, useLocation } from "@tanstack/react-router"
+import { useEffect } from "react"
 
 import { LayoutFooter } from "@/components/layout/footer"
 import { LayoutHeader } from "@/components/layout/header"
@@ -9,6 +10,15 @@ export const Route = createFileRoute("/_layout")({
 })
 
 function RouteComponent() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash)
+      if (element) element.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [hash])
+
   return (
     <main className="relative flex min-h-screen flex-col">
       <LayoutHeader />

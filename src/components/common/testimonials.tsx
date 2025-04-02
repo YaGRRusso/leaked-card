@@ -1,4 +1,8 @@
+import { CommonTitle } from "./title"
+
+import { Users } from "@phosphor-icons/react"
 import { FC, HTMLAttributes } from "react"
+import { useTranslation } from "react-i18next"
 
 import { cn } from "@/utils/cn"
 
@@ -12,10 +16,13 @@ export interface CommonTestimonialsProps extends HTMLAttributes<HTMLUListElement
 }
 
 export const CommonTestimonials: FC<CommonTestimonialsProps> = ({ testimonials, className, ...rest }) => {
+  const { t } = useTranslation()
+
   return (
-    <ul className={cn("flex w-full max-w-xl flex-col gap-20", className)} {...rest}>
+    <ul className={cn("flex w-full flex-col", className)} {...rest}>
+      <CommonTitle to="/" hash="faq" icon={<Users />} title={t("testimonials")} />
       {testimonials?.map((testimonial, index) => (
-        <li key={index} className="flex flex-col gap-2 text-start" dir={index % 2 === 0 ? "ltr" : "rtl"}>
+        <li key={index} className="flex flex-col gap-2 py-8 text-start" dir={index % 2 === 0 ? "ltr" : "rtl"}>
           <div className="flex gap-4">
             <div className="avatar">
               <div className="w-10 rounded-xl">
@@ -27,7 +34,7 @@ export const CommonTestimonials: FC<CommonTestimonialsProps> = ({ testimonials, 
               <span className="text-xs font-light">{testimonial.role}</span>
             </div>
           </div>
-          <p className="text-sm text-muted">{testimonial.text}</p>
+          <p className="max-w-3xl text-sm text-muted">{testimonial.text}</p>
         </li>
       ))}
     </ul>

@@ -3,15 +3,14 @@ import { CardBase } from "./base"
 import { FC, HTMLAttributes, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
-import americanexpress from "@/assets/americanexpress.svg"
-import chip from "@/assets/chip.svg"
-import dinersclub from "@/assets/dinersclub.svg"
-import discover from "@/assets/discover.svg"
-import elo from "@/assets/elo.svg"
-import hipercard from "@/assets/hipercard.svg"
-import jcb from "@/assets/jcb.svg"
-import mastercard from "@/assets/mastercard.svg"
-import visa from "@/assets/visa.svg"
+import AmericanExpressIcon from "@/assets/americanexpress.svg?react"
+import Chip from "@/assets/chip.svg?react"
+import DinersClubIcon from "@/assets/dinersclub.svg?react"
+import DiscoverIcon from "@/assets/discover.svg?react"
+import EloIcon from "@/assets/elo.svg?react"
+import JcbIcon from "@/assets/jcb.svg?react"
+import MastercardIcon from "@/assets/mastercard.svg?react"
+import VisaIcon from "@/assets/visa.svg?react"
 import { CardBrand, getCardBrand } from "@/helpers/getCardBrand"
 import { mask } from "@/helpers/mask"
 import { cn } from "@/utils/cn"
@@ -31,21 +30,21 @@ export const CardFront: FC<CardFrontProps> = ({ number, name, expiryMonth, expir
 
     switch (brand) {
       case CardBrand.AmericanExpress:
-        return americanexpress
+        return <AmericanExpressIcon className="h-full fill-base-content" />
       case CardBrand.DinersClub:
-        return dinersclub
+        return <DinersClubIcon className="h-full fill-base-content" />
       case CardBrand.Discover:
-        return discover
+        return <DiscoverIcon className="h-full fill-base-content" />
       case CardBrand.Elo:
-        return elo
-      case CardBrand.Hipercard:
-        return hipercard
+        return <EloIcon className="h-full fill-base-content" />
       case CardBrand.JCB:
-        return jcb
+        return <JcbIcon className="h-full fill-base-content" />
       case CardBrand.Mastercard:
-        return mastercard
+        return <MastercardIcon className="h-full fill-base-content" />
       case CardBrand.Visa:
-        return visa
+        return <VisaIcon className="h-full fill-base-content" />
+      default:
+        return null
     }
   }, [number])
 
@@ -53,13 +52,13 @@ export const CardFront: FC<CardFrontProps> = ({ number, name, expiryMonth, expir
     <CardBase className={cn("justify-between p-4", className)} {...rest}>
       <div className="flex items-center justify-between">
         <div className="flex h-8 w-10 items-center justify-center overflow-hidden rounded bg-[#f0b100]">
-          <img src={chip} alt="chip" className="h-16 w-16 opacity-40" />
+          <Chip className="h-16 w-16 opacity-40" />
         </div>
         <div className="flex h-12 w-16 items-center justify-end">
-          {cardFlag ? <img src={cardFlag} alt="flag" className="h-full" /> : <div className="h-full w-full skeleton" />}
+          {cardFlag ? cardFlag : <div className="h-full w-full skeleton bg-base-200" />}
         </div>
       </div>
-      <div className="text-xl sm:text-2xl">
+      <div className="text-xl sm:text-2xl sm:tracking-[0.5rem]">
         <span>{mask({ mask: "0000 0000 0000 0000", lazy: false, placeholderChar: "•" }, number).value}</span>
       </div>
       <div className="flex items-center justify-between">

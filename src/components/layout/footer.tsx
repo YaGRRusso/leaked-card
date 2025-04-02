@@ -7,11 +7,11 @@ export const LayoutFooter: FC<LayoutFooterProps> = ({ ...rest }) => {
   const { t } = useTranslation()
 
   return (
-    <footer className="container" {...rest}>
-      <div className="flex items-center justify-center">
+    <footer className="mt-8 bg-base-200" {...rest}>
+      <div className="container flex items-center justify-center">
         <span className="text-center text-sm">
           {t("createdBy")}{" "}
-          <a className="link link-primary" href="https://github.com/YaGRRusso" target="_blank">
+          <a className="link link-accent link-hover" href="https://github.com/YaGRRusso" target="_blank">
             Yago Russo
           </a>
         </span>

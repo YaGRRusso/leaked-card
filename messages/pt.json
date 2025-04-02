@@ -11,7 +11,7 @@
   "createdBy": "Criado por",
   "changeLanguage": "Mudar idioma",
   "leakedCards": "Cartões Vazados",
-  "hero": "Verifique se o seu cartão foi vazado em uma violação de dados.",
+  "hero": "Descubra se você teve o <strong>cartão vazado</strong> em uma violação de dados.",
   "heroDescription": "Insira os detalhes do seu cartão e clique no botão abaixo para verificar.",
   "checkingCard": "Verificando cartão",
   "checkingCardDescription": "Estamos verificando se o seu cartão foi vazado em uma violação de dados. Isso pode levar alguns segundos...",

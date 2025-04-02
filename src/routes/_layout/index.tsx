@@ -36,7 +36,7 @@ function RouteComponent() {
         </div>
       </CommonHero>
       <CommonFlipper
-        className="aspect-video w-full max-w-xl"
+        className="aspect-video w-full max-w-3xl"
         onClick={() => setIsFlipped((old) => !old)}
         isFlipped={isFlipped}
       >
@@ -52,6 +52,7 @@ function RouteComponent() {
         onFormSubmit={() => modalRef.current?.showModal()}
         onFormChange={setValues}
         onShouldFlip={setIsFlipped}
+        className="max-w-3xl"
       />
       <CommonDialog
         ref={modalRef}

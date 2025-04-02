@@ -1,4 +1,4 @@
-import { GithubLogo, MoonStars, Sun } from "@phosphor-icons/react"
+import { CreditCard, GithubLogo, MoonStars, Sun } from "@phosphor-icons/react"
 import { FC, HTMLAttributes } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -23,9 +23,12 @@ export const LayoutHeader: FC<LayoutHeaderProps> = ({ ...rest }) => {
   const { theme, setTheme } = useThemeStore()
 
   return (
-    <header className="container" {...rest}>
-      <div className="flex items-center justify-between gap-x-8 gap-y-2 max-sm:flex-col">
-        <h1 className="text-xl font-medium">{t("leakedCards")}</h1>
+    <header className="top-0 z-10 bg-base-200 sm:sticky" {...rest}>
+      <div className="container flex items-center justify-between gap-x-8 gap-y-2 shadow max-sm:flex-col">
+        <div className="flex items-center gap-2">
+          <CreditCard />
+          <h1 className="text-xl font-medium">{t("leakedCards")}</h1>
+        </div>
 
         <div className="flex items-center gap-2 max-sm:flex-1 max-sm:justify-center">
           <label className="toggle border-input text-base-content">

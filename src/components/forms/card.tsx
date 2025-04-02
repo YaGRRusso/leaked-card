@@ -74,7 +74,7 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
   }, [onFormChange, cardholderName, cardNumber, cardCvv, cardExpiryMonth, cardExpiryYear])
 
   return (
-    <form className={cn("w-full max-w-xl", className)} onSubmit={handleSubmit((ev) => onFormSubmit?.(ev))} {...rest}>
+    <form className={cn("w-full", className)} onSubmit={handleSubmit((ev) => onFormSubmit?.(ev))} {...rest}>
       <fieldset className="fieldset">
         <legend className="fieldset-legend">{t("cardInfos.cardholderName")}</legend>
         <input
@@ -108,7 +108,7 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
       </fieldset>
 
       <div className="flex gap-4">
-        <fieldset className="fieldset">
+        <fieldset className="fieldset flex-1">
           <legend className="fieldset-legend">{t("cardInfos.cardExpiryMonth")}</legend>
           <input
             type="text"
@@ -126,7 +126,7 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
           )}
         </fieldset>
 
-        <fieldset className="fieldset">
+        <fieldset className="fieldset flex-1">
           <legend className="fieldset-legend">{t("cardInfos.cardExpiryYear")}</legend>
           <input
             type="text"
