@@ -9,7 +9,7 @@ import "./styles/global.css"
 import "./i18n"
 
 // Create a new router instance
-const router = createRouter({ routeTree })
+const router = createRouter({ routeTree, basepath: "/leaked-card" })
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {

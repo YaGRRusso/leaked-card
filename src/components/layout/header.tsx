@@ -1,4 +1,4 @@
-import { CreditCard, GithubLogo, MoonStars, Sun } from "@phosphor-icons/react"
+import { GithubLogo, MoonStars, Sun } from "@phosphor-icons/react"
 import { FC, HTMLAttributes } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -25,10 +25,7 @@ export const LayoutHeader: FC<LayoutHeaderProps> = ({ ...rest }) => {
   return (
     <header className="container" {...rest}>
       <div className="flex items-center justify-between gap-x-8 gap-y-2 max-sm:flex-col">
-        <div className="flex items-center gap-2 text-3xl font-bold max-sm:justify-center">
-          <CreditCard />
-          <h1>{t("leakedCards")}</h1>
-        </div>
+        <h1 className="text-xl font-medium">{t("leakedCards")}</h1>
 
         <div className="flex items-center gap-2 max-sm:flex-1 max-sm:justify-center">
           <label className="toggle border-input text-base-content">

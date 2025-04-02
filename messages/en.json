@@ -1,4 +1,6 @@
 {
+  "faq": "Frequently asked questions",
+  "testimonials": "Testimonials",
   "trustedSite": "Trusted site",
   "trustedSiteDescription": "100% safe",
   "required": "Required field",
@@ -9,7 +11,8 @@
   "createdBy": "Created by",
   "changeLanguage": "Change language",
   "leakedCards": "Leaked Cards",
-  "leakedCardsDescription": "Check if your card has been leaked in a data breach.",
+  "hero": "Check if your card has been leaked in a data breach.",
+  "heroDescription": "Enter your card details and click the button below to verify.",
   "checkingCard": "Checking card",
   "checkingCardDescription": "We are checking if your card has been leaked in a data breach. This may take a few seconds...",
   "cardInfos": {

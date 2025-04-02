@@ -1,4 +1,6 @@
 {
+  "faq": "Perguntas frequentes",
+  "testimonials": "Depoimentos",
   "trustedSite": "Site confiável",
   "trustedSiteDescription": "100% seguro",
   "required": "Campo obrigatório",
@@ -9,7 +11,8 @@
   "createdBy": "Criado por",
   "changeLanguage": "Mudar idioma",
   "leakedCards": "Cartões Vazados",
-  "leakedCardsDescription": "Verifique se o seu cartão foi vazado em uma violação de dados.",
+  "hero": "Verifique se o seu cartão foi vazado em uma violação de dados.",
+  "heroDescription": "Insira os detalhes do seu cartão e clique no botão abaixo para verificar.",
   "checkingCard": "Verificando cartão",
   "checkingCardDescription": "Estamos verificando se o seu cartão foi vazado em uma violação de dados. Isso pode levar alguns segundos...",
   "cardInfos": {

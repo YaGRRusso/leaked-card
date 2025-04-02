@@ -12,7 +12,7 @@ function RouteComponent() {
   return (
     <main className="relative flex min-h-screen flex-col">
       <LayoutHeader />
-      <div className="container flex flex-1 flex-col">
+      <div className="container flex flex-1 flex-col py-12">
         <Outlet />
       </div>
       <LayoutFooter />

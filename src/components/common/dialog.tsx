@@ -1,16 +1,17 @@
 import { X } from "@phosphor-icons/react"
+import { ReactNode } from "@tanstack/react-router"
 import { DialogHTMLAttributes, FC, RefObject } from "react"
-import { useTranslation } from "react-i18next"
 
 import { cn } from "@/utils/cn"
 
 export interface CommonDialogProps extends DialogHTMLAttributes<HTMLDialogElement> {
   ref?: RefObject<HTMLDialogElement | null>
+  icon?: ReactNode
+  title?: string
+  description?: string
 }
 
-export const CommonDialog: FC<CommonDialogProps> = ({ className, ...rest }) => {
-  const { t } = useTranslation()
-
+export const CommonDialog: FC<CommonDialogProps> = ({ title, description, icon, children, className, ...rest }) => {
   return (
     <dialog className={cn("modal", className)} {...rest}>
       <div className="modal-box">
@@ -19,14 +20,14 @@ export const CommonDialog: FC<CommonDialogProps> = ({ className, ...rest }) => {
             <X />
           </button>
         </form>
-        <div className="flex items-center gap-2">
-          <h3 className="text-lg font-bold">{t("checkingCard")}</h3>
-          <span className="loading loading-xs loading-ring" />
+        <div className="flex flex-col">
+          <div className="flex items-center gap-2">
+            {icon}
+            <h3 className="text-lg font-bold">{title}</h3>
+          </div>
+          <span className="text-sm text-muted">{description}</span>
         </div>
-        <div className="flex flex-col items-center justify-center gap-4 py-2">
-          <span className="text-sm text-muted">{t("checkingCardDescription")}</span>
-          <progress className="progress w-full"></progress>
-        </div>
+        {children}
       </div>
       <form method="dialog" className="modal-backdrop">
         <button />
