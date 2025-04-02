@@ -20,12 +20,12 @@ export const LayoutShield: FC<LayoutShieldProps> = ({ className, ...rest }) => {
         </div>
         <div
           className={cn(
-            "flex flex-1 items-center justify-end gap-2 rounded bg-base-200 px-3 py-2 text-xs transition-all hover:opacity-100 max-xl:opacity-40",
+            "flex flex-1 items-center justify-end gap-2 rounded text-xs transition-all hover:opacity-100 max-xl:opacity-40 sm:bg-base-200 sm:p-2",
             className,
           )}
           {...rest}
         >
-          <ShieldCheck size={32} weight="fill" className="mb-1 text-success" />
+          <ShieldCheck size={32} weight="fill" className="text-success" />
           <div className="hidden flex-col sm:flex">
             <span className="font-medium">{t("trustedSite")}</span>
             <span className="font-light text-muted">{t("trustedSiteDescription")}</span>
