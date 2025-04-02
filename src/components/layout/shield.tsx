@@ -10,7 +10,7 @@ export const LayoutShield: FC<LayoutShieldProps> = ({ className, ...rest }) => {
   const { t } = useTranslation()
 
   return (
-    <div className="fixed right-1 bottom-1 z-10 sm:right-2 sm:bottom-2">
+    <div className="fixed right-2 bottom-2 z-10">
       <div className="max-sm:tooltip max-sm:tooltip-left">
         <div className="tooltip-content sm:hidden">
           <div className="flex flex-col">
