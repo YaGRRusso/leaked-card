@@ -1,5 +1,7 @@
 # Descubra se seu Cartão Foi Vazado
 
+![preview](preview.png)
+
 ## Visão Geral
 
 Este projeto é um site criado com o objetivo de conscientizar pessoas, especialmente idosos, sobre os riscos de fornecer informações pessoais e sensíveis na internet. A ideia central é simular um ambiente que, à primeira vista, parece totalmente seguro e legítimo, mas que, após o usuário inserir os dados do seu cartão, revela de forma impactante os perigos reais de cair em golpes online.
