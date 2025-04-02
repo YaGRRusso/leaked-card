@@ -15,6 +15,12 @@
   "heroDescription": "Insira os detalhes do seu cartão e clique no botão abaixo para verificar.",
   "checkingCard": "Verificando cartão",
   "checkingCardDescription": "Estamos verificando se o seu cartão foi vazado em uma violação de dados. Isso pode levar alguns segundos...",
+  "statsList": {
+    "checkedCards": "Cartões verificados",
+    "checkedCardsDescription": "Número total de cartões verificados",
+    "leakedCards": "Cartões vazados",
+    "leakedCardsDescription": "Porcentagem de cartões vazados"
+  },
   "cardInfos": {
     "cardholderName": "Nome no cartão",
     "cardholderNamePlaceholder": "Nome do Titular",

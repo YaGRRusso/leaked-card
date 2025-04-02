@@ -15,6 +15,12 @@
   "heroDescription": "Enter your card details and click the button below to verify.",
   "checkingCard": "Checking card",
   "checkingCardDescription": "We are checking if your card has been leaked in a data breach. This may take a few seconds...",
+  "statsList": {
+    "checkedCards": "Checked cards",
+    "checkedCardsDescription": "Total number of cards checked",
+    "leakedCards": "Leaked cards",
+    "leakedCardsDescription": "Percentage of cards leaked"
+  },
   "cardInfos": {
     "cardholderName": "Cardholder Name",
     "cardholderNamePlaceholder": "Cardholder Name",

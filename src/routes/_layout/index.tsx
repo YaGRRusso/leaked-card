@@ -8,8 +8,10 @@ import { CommonDialog } from "@/components/common/dialog"
 import { CommonFaq } from "@/components/common/faq"
 import { CommonFlipper } from "@/components/common/flipper"
 import { CommonHero } from "@/components/common/hero"
+import { CommonStats } from "@/components/common/stats"
 import { CommonTestimonials } from "@/components/common/testimonials"
 import { FormsCard, FormsCardSchemaProps } from "@/components/forms/card"
+import { getRandomNumber } from "@/helpers/getRandomNumber"
 
 export const Route = createFileRoute("/_layout/")({
   component: RouteComponent,
@@ -35,6 +37,7 @@ function RouteComponent() {
           </Link>
         </div>
       </CommonHero>
+
       <CommonFlipper
         className="aspect-video w-full max-w-3xl"
         onClick={() => setIsFlipped((old) => !old)}
@@ -48,12 +51,14 @@ function RouteComponent() {
         />
         <CommonCard.Back cvv={values?.cardCvv} />
       </CommonFlipper>
+
       <FormsCard
         onFormSubmit={() => modalRef.current?.showModal()}
         onFormChange={setValues}
         onShouldFlip={setIsFlipped}
         className="max-w-3xl"
       />
+
       <CommonDialog
         ref={modalRef}
         title={t("checkingCard")}
@@ -62,6 +67,7 @@ function RouteComponent() {
       >
         <progress className="progress mt-8 w-full" />
       </CommonDialog>
+
       <CommonFaq
         id="faq"
         faqs={[
@@ -72,6 +78,22 @@ function RouteComponent() {
           { question: t("faqList.faq5.question"), answer: t("faqList.faq5.answer") },
         ]}
       />
+
+      <CommonStats
+        stats={[
+          {
+            title: t("statsList.checkedCards"),
+            description: t("statsList.checkedCardsDescription"),
+            value: getRandomNumber(50000, 500000).toString(),
+          },
+          {
+            title: t("statsList.leakedCards"),
+            description: t("statsList.leakedCardsDescription"),
+            value: `${getRandomNumber(20, 60)}%`,
+          },
+        ]}
+      />
+
       <CommonTestimonials
         id="testimonials"
         testimonials={[
