@@ -29,5 +29,47 @@
     "cardExpiryYear": "Expiry Year",
     "cardExpiryYearPlaceholder": "YY",
     "submit": "Verify Card"
+  },
+  "faqList": {
+    "faq1": {
+      "question": "How can I know if my card has been leaked?",
+      "answer": "Our system checks known leak databases to identify if your data has been exposed."
+    },
+    "faq2": {
+      "question": "Is it safe to enter my data here?",
+      "answer": "Yes, we use advanced encryption and do not store your information. Our goal is to help you stay protected."
+    },
+    "faq3": {
+      "question": "What should I do if my card is compromised?",
+      "answer": "We recommend contacting your bank immediately, blocking the card, and monitoring suspicious transactions."
+    },
+    "faq4": {
+      "question": "How does this service work?",
+      "answer": "We securely collect the data and cross-check it with known leak databases to inform you of any exposure."
+    },
+    "faq5": {
+      "question": "Is this service official from the banks?",
+      "answer": "We work independently to alert users about possible leaks, but we follow the highest security standards."
+    }
+  },
+  "testimonialsList": {
+    "testimonial1": {
+      "name": "Maria da Silva",
+      "role": "Security Analyst",
+      "image": "https://randomuser.me/api/portraits/women/45.jpg",
+      "text": "After using the service, I was impressed by the transparency and care in presenting the information. The experience alerted me to the real dangers of the internet and made me rethink my online habits."
+    },
+    "testimonial2": {
+      "name": "João Pereira",
+      "role": "Financial Consultant",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "text": "I have always been skeptical about online services, but this project opened my eyes to digital fraud. The clarity and impact of the information encouraged me to protect my data."
+    },
+    "testimonial3": {
+      "name": "Carlos Eduardo",
+      "role": "Digital Entrepreneur",
+      "image": "https://randomuser.me/api/portraits/men/83.jpg",
+      "text": "I used the service out of pure curiosity, and the experience showed me how scammers operate. This alert was essential to raise my awareness about the importance of verifying the security of the sites I access."
+    }
   }
 }

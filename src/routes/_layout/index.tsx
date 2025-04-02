@@ -64,36 +64,33 @@ function RouteComponent() {
       <CommonFaq
         id="faq"
         faqs={[
-          {
-            question: "How to use this app?",
-            answer: "You can use this app by following the instructions provided in the documentation.",
-          },
-          {
-            question: "What is the purpose of this app?",
-            answer:
-              "The purpose of this app is to provide a user-friendly interface for managing your tasks and projects.",
-          },
-          {
-            question: "What is the purpose of this app?",
-            answer:
-              "The purpose of this app is to provide a user-friendly interface for managing your tasks and projects.",
-          },
+          { question: t("faqList.faq1.question"), answer: t("faqList.faq1.answer") },
+          { question: t("faqList.faq2.question"), answer: t("faqList.faq2.answer") },
+          { question: t("faqList.faq3.question"), answer: t("faqList.faq3.answer") },
+          { question: t("faqList.faq4.question"), answer: t("faqList.faq4.answer") },
+          { question: t("faqList.faq5.question"), answer: t("faqList.faq5.answer") },
         ]}
       />
       <CommonTestimonials
         id="testimonials"
         testimonials={[
           {
-            name: "John Doe",
-            role: "Software Engineer",
-            image: "https://i.pravatar.cc/150?img=1",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic voluptatum qui? Laudantium quae unde veniam delectus commodi tenetur ullam corrupti, at sint quod optio quos, temporibus quas voluptas illo.",
+            name: t("testimonialsList.testimonial1.name"),
+            role: t("testimonialsList.testimonial1.role"),
+            image: t("testimonialsList.testimonial1.image"),
+            text: t("testimonialsList.testimonial1.text"),
           },
           {
-            name: "Jane Smith",
-            role: "Product Manager",
-            image: "https://i.pravatar.cc/150?img=2",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic voluptatum qui? Laudantium quae unde veniam delectus commodi tenetur ullam corrupti, at sint quod optio quos, temporibus quas voluptas illo.",
+            name: t("testimonialsList.testimonial2.name"),
+            role: t("testimonialsList.testimonial2.role"),
+            image: t("testimonialsList.testimonial2.image"),
+            text: t("testimonialsList.testimonial2.text"),
+          },
+          {
+            name: t("testimonialsList.testimonial3.name"),
+            role: t("testimonialsList.testimonial3.role"),
+            image: t("testimonialsList.testimonial3.image"),
+            text: t("testimonialsList.testimonial3.text"),
           },
         ]}
       />

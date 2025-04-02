@@ -29,5 +29,47 @@
     "cardExpiryYear": "Ano de expiração",
     "cardExpiryYearPlaceholder": "YY",
     "submit": "Verificar cartão"
+  },
+  "faqList": {
+    "faq1": {
+      "question": "Como posso saber se meu cartão foi vazado?",
+      "answer": "Nosso sistema verifica bancos de dados conhecidos de vazamentos para identificar se seus dados foram expostos."
+    },
+    "faq2": {
+      "question": "É seguro inserir meus dados aqui?",
+      "answer": "Sim, utilizamos criptografia avançada e não armazenamos suas informações. Nosso objetivo é ajudá-lo a se proteger."
+    },
+    "faq3": {
+      "question": "O que devo fazer se meu cartão estiver comprometido?",
+      "answer": "Recomendamos entrar em contato com seu banco imediatamente, bloquear o cartão e monitorar transações suspeitas."
+    },
+    "faq4": {
+      "question": "Como esse serviço funciona?",
+      "answer": "Coletamos os dados de forma segura e cruzamos com bases de dados de vazamentos conhecidos para informar se há alguma exposição."
+    },
+    "faq5": {
+      "question": "Esse serviço é oficial dos bancos?",
+      "answer": "Trabalhamos de forma independente para alertar usuários sobre possíveis vazamentos, mas seguimos os mais altos padrões de segurança."
+    }
+  },
+  "testimonialsList": {
+    "testimonial1": {
+      "name": "Maria da Silva",
+      "role": "Analista de Segurança",
+      "image": "https://randomuser.me/api/portraits/women/45.jpg",
+      "text": "Após utilizar o serviço, fiquei impressionada com a transparência e o cuidado na apresentação das informações. A experiência me alertou sobre os perigos reais da internet e me fez repensar meus hábitos online."
+    },
+    "testimonial2": {
+      "name": "João Pereira",
+      "role": "Consultor Financeiro",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "text": "Sempre fui cético em relação a serviços online, mas este projeto me abriu os olhos para as fraudes digitais. A clareza e o impacto das informações me incentivaram a proteger meus dados."
+    },
+    "testimonial3": {
+      "name": "Carlos Eduardo",
+      "role": "Empreendedor Digital",
+      "image": "https://randomuser.me/api/portraits/men/83.jpg",
+      "text": "Utilizei o serviço por pura curiosidade, e a experiência me mostrou como os golpistas operam. Esse alerta foi essencial para me conscientizar sobre a importância de verificar a segurança dos sites que acesso."
+    }
   }
 }
