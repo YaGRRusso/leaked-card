@@ -17,10 +17,10 @@ export const CommonFaq: FC<CommonFaqProps> = ({ faqs, className, ...rest }) => {
   const { t } = useTranslation()
 
   return (
-    <ul className={cn("flex w-full flex-col", className)} {...rest}>
+    <ul className={cn("flex w-full flex-col gap-4", className)} {...rest}>
       <CommonTitle to="/" hash="faq" icon={<Question />} title={t("faq")} />
       {faqs?.map((faq, index) => (
-        <li key={index} className="collapse rounded-none border-b border-base-content/20 last:border-none">
+        <li key={index} className="collapse rounded bg-base-200/60 px-4 py-2">
           <input type="radio" name="accordion" defaultChecked={index === 0} />
           <div className="collapse-title px-0 font-semibold">{faq.question}</div>
           <div className="collapse-content px-0 text-sm text-muted">{faq.answer}</div>

@@ -19,10 +19,14 @@ export const CommonTestimonials: FC<CommonTestimonialsProps> = ({ testimonials, 
   const { t } = useTranslation()
 
   return (
-    <ul className={cn("flex w-full flex-col", className)} {...rest}>
+    <ul className={cn("flex w-full flex-col gap-4", className)} {...rest}>
       <CommonTitle to="/" hash="faq" icon={<Users />} title={t("testimonials")} />
       {testimonials?.map((testimonial, index) => (
-        <li key={index} className="flex flex-col gap-2 py-8 text-start" dir={index % 2 === 0 ? "ltr" : "rtl"}>
+        <li
+          key={index}
+          className="flex flex-col gap-2 rounded bg-base-200/60 p-4 text-start"
+          dir={index % 2 === 0 ? "ltr" : "rtl"}
+        >
           <div className="flex gap-4">
             <div className="avatar">
               <div className="w-10 rounded-xl">
