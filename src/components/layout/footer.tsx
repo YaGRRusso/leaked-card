@@ -7,7 +7,7 @@ export const LayoutFooter: FC<LayoutFooterProps> = ({ ...rest }) => {
   const { t } = useTranslation()
 
   return (
-    <footer className="mt-8 bg-base-200" {...rest}>
+    <footer className="bg-base-200" {...rest}>
       <div className="container flex items-center justify-center">
         <span className="text-center text-sm">
           {t("createdBy")}{" "}

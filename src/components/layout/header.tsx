@@ -23,7 +23,7 @@ export const LayoutHeader: FC<LayoutHeaderProps> = ({ ...rest }) => {
   const { theme, setTheme } = useThemeStore()
 
   return (
-    <header className="top-0 z-10 bg-base-200 sm:sticky" {...rest}>
+    <header className="sticky top-0 z-10 bg-base-200" {...rest}>
       <div className="container flex items-center justify-between gap-x-8 gap-y-2 shadow max-sm:flex-col">
         <div className="flex items-center gap-2">
           <CreditCard />
