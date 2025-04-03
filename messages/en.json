@@ -1,4 +1,8 @@
 {
+  "tryAgain": "Try Again",
+  "nothingFound": "Nothing Found",
+  "nothingFoundDescription": "The page was not found or does not exist.",
+  "backToStart": "Back to Start",
   "faq": "Frequently asked questions",
   "testimonials": "Testimonials",
   "trustedSite": "Trusted site",

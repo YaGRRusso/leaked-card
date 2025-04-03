@@ -36,11 +36,11 @@ function RouteComponent() {
     <div className="flex flex-1 flex-col items-center justify-center gap-16">
       <CommonHero title={t("hero")} description={t("heroDescription")}>
         <div className="flex items-center gap-2">
-          <Link to="/" hash="faq" className="btn btn-soft btn-xs">
+          <Link to="/" hash="faq" className="btn btn-soft btn-xs sm:btn-sm">
             <Question className="mb-1" />
             {t("faq")}
           </Link>
-          <Link to="/" hash="testimonials" className="btn btn-soft btn-xs">
+          <Link to="/" hash="testimonials" className="btn btn-soft btn-xs sm:btn-sm">
             <Users className="mb-1" />
             {t("testimonials")}
           </Link>
@@ -89,7 +89,7 @@ function RouteComponent() {
           {
             title: t("statsList.leakedCards"),
             description: t("statsList.leakedCardsDescription"),
-            value: `${getRandomNumber(20, 60)}%`,
+            value: `${getRandomNumber(10, 20)}%`,
           },
         ]}
       />

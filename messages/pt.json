@@ -1,4 +1,8 @@
 {
+  "tryAgain": "Tentar Novamente",
+  "nothingFound": "Nada Encontrado",
+  "nothingFoundDescription": "Página não foi encontrada ou não existe.",
+  "backToStart": "Voltar ao Início",
   "faq": "Perguntas frequentes",
   "testimonials": "Depoimentos",
   "trustedSite": "Site confiável",
