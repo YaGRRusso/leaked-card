@@ -15,7 +15,7 @@ export const CommonHero: FC<CommonHeroProps> = ({ title, description, children, 
         <h1 className="text-4xl font-bold tracking-wider sm:text-5xl">
           <Trans components={{ strong: <strong className="font-extrabold text-accent uppercase" /> }}>{title}</Trans>
         </h1>
-        {description && <p className="text-muted">{description}</p>}
+        {description && <p className="max-w-3xl text-muted">{description}</p>}
         {children}
       </div>
     </div>
