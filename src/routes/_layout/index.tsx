@@ -84,7 +84,7 @@ function RouteComponent() {
           {
             title: t("statsList.checkedCards"),
             description: t("statsList.checkedCardsDescription"),
-            value: getRandomNumber(50000, 500000).toString(),
+            value: getRandomNumber(50000, 500000).toLocaleString(),
           },
           {
             title: t("statsList.leakedCards"),
