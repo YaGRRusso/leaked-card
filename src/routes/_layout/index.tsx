@@ -1,6 +1,6 @@
 import { Question, Users } from "@phosphor-icons/react"
-import { createFileRoute, Link } from "@tanstack/react-router"
-import { useRef, useState } from "react"
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router"
+import { useCallback, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { CommonCard } from "@/components/common/card"
@@ -22,6 +22,15 @@ function RouteComponent() {
   const [isFlipped, setIsFlipped] = useState(false)
   const [values, setValues] = useState<FormsCardSchemaProps>()
   const modalRef = useRef<HTMLDialogElement>(null)
+  const navigate = useNavigate()
+
+  const handleSubmit = useCallback(() => {
+    modalRef.current?.showModal()
+
+    setTimeout(() => {
+      navigate({ to: "/result" })
+    }, 5000)
+  }, [navigate])
 
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-16">
@@ -53,20 +62,11 @@ function RouteComponent() {
       </CommonFlipper>
 
       <FormsCard
-        onFormSubmit={() => modalRef.current?.showModal()}
+        onFormSubmit={handleSubmit}
         onFormChange={setValues}
         onShouldFlip={setIsFlipped}
         className="max-w-3xl"
       />
-
-      <CommonDialog
-        ref={modalRef}
-        title={t("checkingCard")}
-        description={t("checkingCardDescription")}
-        icon={<span className="loading loading-xs loading-ring" />}
-      >
-        <progress className="progress mt-8 w-full" />
-      </CommonDialog>
 
       <CommonFaq
         id="faq"
@@ -117,6 +117,16 @@ function RouteComponent() {
           },
         ]}
       />
+
+      <CommonDialog
+        ref={modalRef}
+        // open={false}
+        title={t("checkingCard")}
+        description={t("checkingCardDescription")}
+        icon={<span className="loading loading-xs loading-ring" />}
+      >
+        <progress className="progress mt-8 w-full" />
+      </CommonDialog>
     </div>
   )
 }
