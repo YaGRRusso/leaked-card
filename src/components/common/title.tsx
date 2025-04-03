@@ -8,9 +8,11 @@ export interface CommonTitleProps extends LinkComponentProps {
   title?: string
 }
 
-export const CommonTitle: FC<CommonTitleProps> = ({ icon, title, className, ...rest }) => {
+export const CommonTitle: FC<CommonTitleProps> = ({ icon, title, className, hash, ...rest }) => {
   return (
     <Link
+      id={typeof hash === "string" ? hash : undefined}
+      hash={hash}
       className={cn(
         "mb-4 flex link items-center gap-2 border-b border-base-content/20 py-4 text-xl font-medium tracking-wider link-hover",
         className,
@@ -18,7 +20,7 @@ export const CommonTitle: FC<CommonTitleProps> = ({ icon, title, className, ...r
       {...rest}
     >
       {icon}
-      <h2>{title}</h2>
+      <h2 className="flex-1">{title}</h2>
     </Link>
   )
 }

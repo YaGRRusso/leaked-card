@@ -1,6 +1,10 @@
+import { Copy, Info, Share, TelegramLogo, TwitterLogo, WhatsappLogo } from "@phosphor-icons/react"
 import { createFileRoute } from "@tanstack/react-router"
 
+import { CommonCheckList } from "@/components/common/check-list"
 import { CommonHero } from "@/components/common/hero"
+import { CommonQuotes } from "@/components/common/quotes"
+import { CommonTitle } from "@/components/common/title"
 
 export const Route = createFileRoute("/_layout/result")({
   component: RouteComponent,
@@ -8,104 +12,112 @@ export const Route = createFileRoute("/_layout/result")({
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col items-center gap-16 py-8">
       <CommonHero
         title="Ainda bem que isso foi só um <strong>teste!</strong> Mas poderia ter sido real..."
-        description="Golpistas usam sites como este todos os dias para roubar dinheiro de pessoas inocentes. Mas agora você aprendeu como evitar esse tipo de fraude!"
+        description="Este projeto simula a experiência de um golpe online para alertar sobre os riscos de compartilhar dados sem verificar a segurança do ambiente. Conheça as táticas dos golpistas e aprenda a se proteger."
       />
 
-      <div>
-        "Você viu como era fácil acreditar que este site era seguro? Esse é o truque dos criminosos: criar páginas
-        falsas que parecem legítimas para enganar pessoas."
-        <br />
-        "Nunca preencha informações do seu cartão ou dados pessoais em sites que você não conhece 100%."
+      <article className="flex flex-col gap-6 text-justify font-light tracking-wider">
+        <p>
+          Ao longo dos últimos anos, inúmeros golpes online têm se aproveitado da confiança, especialmente de pessoas
+          menos familiarizadas com o ambiente digital. Este projeto nasceu ao ver familiares e amigos, principalmente
+          idosos, compartilhando links fraudulentos. Nosso objetivo é demonstrar, de forma educativa, como ambientes
+          aparentemente seguros podem esconder armadilhas perigosas. Ao entender essas estratégias, você estará melhor
+          preparado para proteger seus dados.
+        </p>
+        <CommonQuotes>
+          Você viu como foi fácil acreditar que este site era seguro? Esse é o truque dos criminosos: criar páginas
+          falsas que parecem legítimas para enganar pessoas.
+          <br />
+          Nenhum dado foi salvo, esta simulação é apenas para ensinar. Observe como uma interface bem elaborada pode
+          mascarar práticas enganosas e lembre-se: sua segurança digital começa com a verificação da autenticidade dos
+          sites.
+        </CommonQuotes>
+        <p>
+          Estar informado é a melhor defesa contra fraudes online. Compreender as táticas dos golpistas e reconhecer os
+          sinais de alerta é fundamental para proteger suas informações pessoais. Esperamos que esta experiência
+          esclareça como golpes são aplicados e incentive uma prática constante de verificação antes de compartilhar
+          seus dados. Compartilhe esse conhecimento e ajude a promover um ambiente digital mais seguro para todos.
+        </p>
+      </article>
+
+      <div className="flex flex-col gap-4">
+        <CommonTitle
+          hash="strategies"
+          title="Veja as principais estratégias utilizadas pelos golpistas."
+          icon={<Info />}
+        />
+        <CommonCheckList
+          list={[
+            {
+              text: "<strong>Phishing:</strong> E-mails e sites falsos que imitam instituições confiáveis para coletar informações.",
+            },
+            {
+              text: "<strong>Fraudes em Redes Sociais:</strong> Perfis falsos e ofertas tentadoras que visam roubar dados.",
+            },
+            {
+              text: "<strong>Golpes de Suporte Técnico:</strong> Contatos que simulam assistência para resolver problemas inexistentes.",
+            },
+            {
+              text: "<strong>Falsos Prêmios e Sorteios:</strong> Promessas de prêmios ou dinheiro que exigem a entrega de dados pessoais.",
+            },
+            {
+              text: "<strong>Fraudes em Aplicativos de Pagamento:</strong> Solicitações fraudulentas de confirmação de transações.",
+            },
+            {
+              text: "<strong>Design Profissional:</strong> Layouts limpos e selos de segurança falsos para transmitir credibilidade.",
+            },
+            {
+              text: "<strong>Urgência e Alarme:</strong> Mensagens que induzem ao medo e à pressa, como alertas de vazamento de dados ou ofertas imperdíveis.",
+            },
+            {
+              text: "<strong>Solicitação de Dados Sensíveis:</strong> Pedem informações pessoais e financeiras, como número do cartão, CPF, senha e outros dados críticos, que podem ser usados para fraudes.",
+            },
+          ]}
+        />
       </div>
 
-      <div>
-        Na era digital, os golpes online se tornaram uma ameaça constante, explorando a confiança e a vulnerabilidade de
-        muitas pessoas. Esse projeto nasceu justamente após ver tios, avós e outros familiares compartilharem links e
-        sites fraudulentos, acreditando na legitimidade de ambientes que, na verdade, foram criados para enganar. O
-        objetivo aqui é educar e alertar sem causar pânico, mostrando como os golpistas operam e como você pode se
-        proteger.
-        <br />
-        Por que as Pessoas Caem nesses Golpes? Os golpistas investem em design e comunicação de alta qualidade para
-        criar um ambiente que transmite segurança. Sites falsos podem exibir cadeados, selos de "segurança" e outras
-        marcas visuais que, à primeira vista, parecem indicar a veracidade do conteúdo. Muitas pessoas, principalmente
-        aquelas que não lidam diariamente com tecnologia ou que não estão atualizadas sobre as táticas usadas por
-        criminosos, acabam se deixando enganar pela aparência profissional e pela urgência transmitida nas mensagens.
-        <br />
-        Como os Golpistas Operam
-        <ul>
-          <li>
-            Os criminosos criam páginas e e-mails que imitam sites confiáveis, utilizando técnicas sofisticadas como:
-          </li>
-
-          <li>Design Profissional: Layouts limpos e selos de segurança falsos para transmitir credibilidade.</li>
-          <li>
-            Urgência e Alarme: Mensagens que induzem ao medo e à pressa, como alertas de vazamento de dados ou ofertas
-            imperdíveis.
-          </li>
-          <li>
-            Solicitação de Dados Sensíveis: Pedem informações pessoais e financeiras, como número do cartão, CPF, senha
-            e outros dados críticos, que podem ser usados para fraudes.
-          </li>
-        </ul>
-        <br />
-        Essas táticas exploram tanto a confiança inata quanto o desconhecimento sobre práticas de segurança digital,
-        tornando o público idoso e menos familiarizado com tecnologias especialmente vulnerável.
-        <br />
-        A Importância de Entender o Que Está Acontecendo Conhecer as estratégias utilizadas pelos golpistas é
-        fundamental para se proteger. Compreender que um ambiente pode parecer seguro, mas ainda assim ser fraudulento,
-        é o primeiro passo para evitar cair em armadilhas. Esse conhecimento permite que o usuário questione, verifique
-        e, acima de tudo, compartilhe informações corretas com amigos e familiares. No caso deste projeto, é importante
-        destacar que nenhum dado inserido foi salvo ou armazenado durante a simulação – a intenção é puramente
-        educativa.
-        <br />
-        Recomendações e Fontes Confiáveis Para quem deseja confirmar a legitimidade de um site ou checar a segurança de
-        uma transação, é recomendado recorrer a fontes confiáveis, como:
-        <ul>
-          <li>
-            Sites Oficiais dos Bancos: Sempre acesse diretamente o site do seu banco digitando o endereço manualmente no
-            navegador.
-          </li>
-
-          <li>Banco Central e PROCON: Órgãos oficiais que frequentemente publicam alertas e dicas de segurança.</li>
-          <li>
-            Certificadoras Digitais: Ferramentas como SSL Checker ou portais de certificação digital (ex.: Certisign)
-            ajudam a verificar se o certificado de segurança de um site é válido.
-          </li>
-        </ul>
-        Ao combinar essas práticas com um olhar crítico, você estará melhor preparado para identificar e evitar golpes
-        online.
-      </div>
-
-      <ul className="flex flex-col gap-4">
-        <li>
-          ✅ Desconfie de sites que pedem seus dados sensíveis. Sites verdadeiros de bancos e empresas nunca pedem seu
-          cartão completo ou sua senha.
-        </li>
-        <li>
-          ✅ Verifique a URL antes de preencher qualquer informação. Golpistas usam domínios falsos como
-          banco-seguro.com em vez de banco.com.br.
-        </li>
-        <li>
-          ✅ Nunca clique em links de e-mails ou mensagens suspeitas. Prefira digitar o site manualmente no navegador.
-        </li>
-        <li>
-          ✅ Procure sinais de fraude. Se o site promete "dinheiro fácil", "verificação urgente" ou "prêmios gratuitos",
-          é golpe!
-        </li>
-        <li>
-          ✅ Habilite notificações de compras no cartão. Seu banco pode avisar imediatamente caso uma compra suspeita
-          seja feita.
-        </li>
-        <li>✅ Compartilhe este site com seus amigos e familiares. A melhor defesa contra golpes é a informação!</li>
-      </ul>
-
-      <div>
-        📢 Compartilhe e proteja quem você ama! ("Envie para amigos e familiares para que eles também aprendam a evitar
-        golpes!")
-        {/* Botões de compartilhamento para WhatsApp, Facebook e Telegram facilitariam a viralização. */}
+      <div className="flex flex-col gap-4 max-sm:text-center">
+        <CommonTitle hash="share" title="Compartilhe este projeto e ajude a proteger mais pessoas!" icon={<Share />} />
+        <p className="text-sm text-muted">
+          Nosso objetivo é alertar e capacitar você a identificar e evitar golpes online. Se esta experiência ajudou a
+          aumentar sua consciência sobre fraudes digitais, compartilhe com amigos e familiares. Juntos, podemos
+          transformar informação em proteção!
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <a
+            className="btn flex-1 btn-soft btn-info"
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Confira este site: https://site.com")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterLogo />
+            Twitter
+          </a>
+          <a
+            className="btn flex-1 btn-soft btn-success"
+            href={`https://wa.me/?text=${encodeURIComponent("Confira este site: https://site.com")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsappLogo />
+            Whatsapp
+          </a>
+          <a
+            className="btn flex-1 btn-soft btn-info"
+            href={`https://t.me/share/url?url=${encodeURIComponent("https://site.com")}&text=${encodeURIComponent("Confira este site!")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TelegramLogo />
+            Telegram
+          </a>
+          <button className="btn flex-1 btn-soft">
+            <Copy />
+            Copiar Link
+          </button>
+        </div>
       </div>
     </div>
   )

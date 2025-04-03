@@ -69,7 +69,6 @@ function RouteComponent() {
       />
 
       <CommonFaq
-        id="faq"
         faqs={[
           { question: t("faqList.faq1.question"), answer: t("faqList.faq1.answer") },
           { question: t("faqList.faq2.question"), answer: t("faqList.faq2.answer") },
@@ -95,7 +94,6 @@ function RouteComponent() {
       />
 
       <CommonTestimonials
-        id="testimonials"
         testimonials={[
           {
             name: t("testimonialsList.testimonial1.name"),

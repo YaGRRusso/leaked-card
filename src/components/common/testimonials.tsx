@@ -20,7 +20,7 @@ export const CommonTestimonials: FC<CommonTestimonialsProps> = ({ testimonials, 
 
   return (
     <ul className={cn("flex w-full flex-col gap-4", className)} {...rest}>
-      <CommonTitle to="/" hash="faq" icon={<Users />} title={t("testimonials")} />
+      <CommonTitle to="/" hash="testimonials" icon={<Users />} title={t("testimonials")} />
       {testimonials?.map((testimonial, index) => (
         <li
           key={index}
