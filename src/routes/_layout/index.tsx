@@ -33,9 +33,9 @@ function RouteComponent() {
   }, [navigate])
 
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-16">
+    <div className="flex flex-1 flex-col items-center justify-center gap-8 sm:gap-16 sm:py-8">
       <CommonHero title={t("hero")} description={t("heroDescription")}>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           <Link to="/" hash="faq" className="btn btn-soft btn-xs sm:btn-sm">
             <Question className="mb-1" />
             {t("faq")}
