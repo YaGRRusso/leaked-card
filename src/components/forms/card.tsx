@@ -45,7 +45,8 @@ export interface FormsCardProps extends FormHTMLAttributes<HTMLFormElement> {
 }
 
 export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormChange, onFormSubmit, ...rest }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("")
+  const { t: tValidate } = useTranslation("validate")
 
   const {
     watch,
@@ -76,11 +77,11 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
   return (
     <form className={cn("w-full", className)} onSubmit={handleSubmit((ev) => onFormSubmit?.(ev))} {...rest}>
       <fieldset className="fieldset">
-        <legend className="fieldset-legend">{t("cardInfos.cardholderName")}</legend>
+        <legend className="fieldset-legend">{t("forms.card.cardholderName")}</legend>
         <input
           type="text"
           className="input w-full"
-          placeholder={t("cardInfos.cardholderName")}
+          placeholder={t("forms.card.cardholderName")}
           value={mask(cardholderNameMask, watch("cardholderName")).value}
           onChange={(ev) =>
             setValue("cardholderName", mask(cardholderNameMask, ev.target.value).unmaskedValue, {
@@ -89,31 +90,33 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
           }
         />
         {errors.cardholderName?.message && (
-          <p className="fieldset-label text-error">{t(errors.cardholderName.message)}</p>
+          <p className="fieldset-label text-error">{tValidate(errors.cardholderName.message)}</p>
         )}
       </fieldset>
 
       <fieldset className="fieldset">
-        <legend className="fieldset-legend">{t("cardInfos.cardNumber")}</legend>
+        <legend className="fieldset-legend">{t("forms.card.cardNumber")}</legend>
         <input
           type="text"
           className="input w-full"
-          placeholder={t("cardInfos.cardNumber")}
+          placeholder={t("forms.card.cardNumber")}
           value={mask(cardNumberMask, watch("cardNumber")).value}
           onChange={(ev) =>
             setValue("cardNumber", mask(cardNumberMask, ev.target.value).unmaskedValue, { shouldValidate: true })
           }
         />
-        {errors.cardNumber?.message && <p className="fieldset-label text-error">{t(errors.cardNumber.message)}</p>}
+        {errors.cardNumber?.message && (
+          <p className="fieldset-label text-error">{tValidate(errors.cardNumber.message)}</p>
+        )}
       </fieldset>
 
       <div className="flex gap-4">
         <fieldset className="fieldset flex-1">
-          <legend className="fieldset-legend">{t("cardInfos.cardExpiryMonth")}</legend>
+          <legend className="fieldset-legend">{t("forms.card.cardExpiryMonth")}</legend>
           <input
             type="text"
             className="input w-full"
-            placeholder={t("cardInfos.cardExpiryMonthPlaceholder")}
+            placeholder={t("forms.card.cardExpiryMonthPlaceholder")}
             value={mask(cardExpiryMonthMask, watch("cardExpiryMonth")).value}
             onChange={(ev) =>
               setValue("cardExpiryMonth", mask(cardExpiryMonthMask, ev.target.value).unmaskedValue, {
@@ -122,16 +125,16 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
             }
           />
           {errors.cardExpiryMonth?.message && (
-            <p className="fieldset-label text-error">{t(errors.cardExpiryMonth.message)}</p>
+            <p className="fieldset-label text-error">{tValidate(errors.cardExpiryMonth.message)}</p>
           )}
         </fieldset>
 
         <fieldset className="fieldset flex-1">
-          <legend className="fieldset-legend">{t("cardInfos.cardExpiryYear")}</legend>
+          <legend className="fieldset-legend">{t("forms.card.cardExpiryYear")}</legend>
           <input
             type="text"
             className="input w-full"
-            placeholder={t("cardInfos.cardExpiryYearPlaceholder")}
+            placeholder={t("forms.card.cardExpiryYearPlaceholder")}
             value={mask(cardExpiryYearMask, watch("cardExpiryYear")).value}
             onChange={(ev) =>
               setValue("cardExpiryYear", mask(cardExpiryYearMask, ev.target.value).unmaskedValue, {
@@ -140,17 +143,17 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
             }
           />
           {errors.cardExpiryYear?.message && (
-            <p className="fieldset-label text-error">{t(errors.cardExpiryYear.message)}</p>
+            <p className="fieldset-label text-error">{tValidate(errors.cardExpiryYear.message)}</p>
           )}
         </fieldset>
       </div>
 
       <fieldset className="fieldset">
-        <legend className="fieldset-legend">{t("cardInfos.cardCvv")}</legend>
+        <legend className="fieldset-legend">{t("forms.card.cardCvv")}</legend>
         <input
           type="text"
           className="input w-full"
-          placeholder={t("cardInfos.cardCvvPlaceholder")}
+          placeholder={t("forms.card.cardCvvPlaceholder")}
           value={mask(cardCvvMask, watch("cardCvv")).value}
           onFocus={() => onShouldFlip?.(true)}
           onBlur={() => onShouldFlip?.(false)}
@@ -158,11 +161,11 @@ export const FormsCard: FC<FormsCardProps> = ({ className, onShouldFlip, onFormC
             setValue("cardCvv", mask(cardCvvMask, ev.target.value).unmaskedValue, { shouldValidate: true })
           }
         />
-        {errors.cardCvv?.message && <p className="fieldset-label text-error">{t(errors.cardCvv.message)}</p>}
+        {errors.cardCvv?.message && <p className="fieldset-label text-error">{tValidate(errors.cardCvv.message)}</p>}
       </fieldset>
 
       <button type="submit" className="btn mt-4 w-full btn-success" disabled={!isValid}>
-        {t("cardInfos.submit")}
+        {t("forms.card.submit")}
       </button>
     </form>
   )

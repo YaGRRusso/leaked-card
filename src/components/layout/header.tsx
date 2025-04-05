@@ -28,7 +28,7 @@ export const LayoutHeader: FC<LayoutHeaderProps> = ({ ...rest }) => {
       <div className="container flex items-center justify-between gap-x-8 gap-y-2 shadow max-sm:flex-col">
         <Link to="/" className="flex items-center gap-2">
           <CreditCard />
-          <h1 className="text-xl font-medium">{t("leakedCards")}</h1>
+          <h1 className="text-xl font-medium">{t("components.leakedCards")}</h1>
         </Link>
 
         <div className="flex items-center gap-2 max-sm:flex-1 max-sm:justify-center">
@@ -48,7 +48,7 @@ export const LayoutHeader: FC<LayoutHeaderProps> = ({ ...rest }) => {
             value={i18n.language}
           >
             <option value="none" disabled>
-              {t("changeLanguage")}
+              {t("components.changeLanguage")}
             </option>
             {langs.map((lang) => (
               <option key={lang.value} value={lang.value}>

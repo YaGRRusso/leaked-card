@@ -14,11 +14,11 @@ export const LayoutNotFound: NotFoundRouteComponent = ({ ...rest }) => {
     <main className="container flex min-h-screen flex-col items-center justify-center gap-4" {...rest}>
       <CommonHero
         icon={<Question className="text-warning" />}
-        title={t("nothingFound")}
-        description={t("nothingFoundDescription")}
+        title={t("components.nothingFound")}
+        description={t("components.nothingFoundDescription")}
       >
         <Link className="btn btn-soft" to="/">
-          {t("backToStart")}
+          {t("components.backToStart")}
         </Link>
       </CommonHero>
     </main>

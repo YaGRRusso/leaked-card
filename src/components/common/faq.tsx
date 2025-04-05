@@ -18,7 +18,7 @@ export const CommonFaq: FC<CommonFaqProps> = ({ faqs, className, ...rest }) => {
 
   return (
     <ul className={cn("flex w-full flex-col gap-4", className)} {...rest}>
-      <CommonTitle to="/" hash="faq" icon={<Question />} title={t("faq")} />
+      <CommonTitle to="/" hash="faq" icon={<Question />} title={t("components.faq")} />
       {faqs?.map((faq, index) => (
         <li key={index} className="collapse rounded bg-base-200/60 px-4 py-2">
           <input type="radio" name="accordion" defaultChecked={index === 0} />

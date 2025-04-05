@@ -34,15 +34,15 @@ function RouteComponent() {
 
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-8 sm:gap-16 sm:py-8">
-      <CommonHero title={t("hero")} description={t("heroDescription")}>
+      <CommonHero title={t("homePage.hero")} description={t("homePage.heroDescription")}>
         <div className="flex flex-wrap items-center justify-center gap-2">
           <Link to="/" hash="faq" className="btn btn-soft btn-xs sm:btn-sm">
             <Question className="mb-1" />
-            {t("faq")}
+            {t("homePage.faq")}
           </Link>
           <Link to="/" hash="testimonials" className="btn btn-soft btn-xs sm:btn-sm">
             <Users className="mb-1" />
-            {t("testimonials")}
+            {t("homePage.testimonials")}
           </Link>
         </div>
       </CommonHero>
@@ -70,24 +70,24 @@ function RouteComponent() {
 
       <CommonFaq
         faqs={[
-          { question: t("faqList.faq1.question"), answer: t("faqList.faq1.answer") },
-          { question: t("faqList.faq2.question"), answer: t("faqList.faq2.answer") },
-          { question: t("faqList.faq3.question"), answer: t("faqList.faq3.answer") },
-          { question: t("faqList.faq4.question"), answer: t("faqList.faq4.answer") },
-          { question: t("faqList.faq5.question"), answer: t("faqList.faq5.answer") },
+          { question: t("homePage.faqList.faq1.question"), answer: t("homePage.faqList.faq1.answer") },
+          { question: t("homePage.faqList.faq2.question"), answer: t("homePage.faqList.faq2.answer") },
+          { question: t("homePage.faqList.faq3.question"), answer: t("homePage.faqList.faq3.answer") },
+          { question: t("homePage.faqList.faq4.question"), answer: t("homePage.faqList.faq4.answer") },
+          { question: t("homePage.faqList.faq5.question"), answer: t("homePage.faqList.faq5.answer") },
         ]}
       />
 
       <CommonStats
         stats={[
           {
-            title: t("statsList.checkedCards"),
-            description: t("statsList.checkedCardsDescription"),
+            title: t("homePage.statsList.checkedCards"),
+            description: t("homePage.statsList.checkedCardsDescription"),
             value: getRandomNumber(50000, 500000).toLocaleString(),
           },
           {
-            title: t("statsList.leakedCards"),
-            description: t("statsList.leakedCardsDescription"),
+            title: t("homePage.statsList.leakedCards"),
+            description: t("homePage.statsList.leakedCardsDescription"),
             value: `${getRandomNumber(10, 20)}%`,
           },
         ]}
@@ -96,22 +96,22 @@ function RouteComponent() {
       <CommonTestimonials
         testimonials={[
           {
-            name: t("testimonialsList.testimonial1.name"),
-            role: t("testimonialsList.testimonial1.role"),
-            image: t("testimonialsList.testimonial1.image"),
-            text: t("testimonialsList.testimonial1.text"),
+            name: t("homePage.testimonialsList.testimonial1.name"),
+            role: t("homePage.testimonialsList.testimonial1.role"),
+            image: t("homePage.testimonialsList.testimonial1.image"),
+            text: t("homePage.testimonialsList.testimonial1.text"),
           },
           {
-            name: t("testimonialsList.testimonial2.name"),
-            role: t("testimonialsList.testimonial2.role"),
-            image: t("testimonialsList.testimonial2.image"),
-            text: t("testimonialsList.testimonial2.text"),
+            name: t("homePage.testimonialsList.testimonial2.name"),
+            role: t("homePage.testimonialsList.testimonial2.role"),
+            image: t("homePage.testimonialsList.testimonial2.image"),
+            text: t("homePage.testimonialsList.testimonial2.text"),
           },
           {
-            name: t("testimonialsList.testimonial3.name"),
-            role: t("testimonialsList.testimonial3.role"),
-            image: t("testimonialsList.testimonial3.image"),
-            text: t("testimonialsList.testimonial3.text"),
+            name: t("homePage.testimonialsList.testimonial3.name"),
+            role: t("homePage.testimonialsList.testimonial3.role"),
+            image: t("homePage.testimonialsList.testimonial3.image"),
+            text: t("homePage.testimonialsList.testimonial3.text"),
           },
         ]}
       />

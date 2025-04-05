@@ -62,11 +62,11 @@ export const CardFront: FC<CardFrontProps> = ({ number, name, expiryMonth, expir
         <span>{mask({ mask: "0000 0000 0000 0000", lazy: false, placeholderChar: "•" }, number).value}</span>
       </div>
       <div className="flex items-center justify-between">
-        <span className="uppercase">{name || t("cardInfos.cardholderNamePlaceholder")}</span>
+        <span className="uppercase">{name || t("forms.card.cardholderNamePlaceholder")}</span>
         <span>
-          {expiryMonth || t("cardInfos.cardExpiryMonthPlaceholder")}
+          {expiryMonth || t("forms.card.cardExpiryMonthPlaceholder")}
           {"/"}
-          {expiryYear || t("cardInfos.cardExpiryYearPlaceholder")}
+          {expiryYear || t("forms.card.cardExpiryYearPlaceholder")}
         </span>
       </div>
     </CardBase>

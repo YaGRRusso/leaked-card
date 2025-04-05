@@ -14,7 +14,7 @@ export const LayoutError: ErrorRouteComponent = ({ reset, error, ...rest }) => {
     <main className="container flex min-h-screen flex-col items-center justify-center gap-4" {...rest}>
       <CommonHero icon={<Warning className="text-error" />} title={error.name} description={error.message}>
         <button className="btn btn-soft" onClick={reset}>
-          {t("tryAgain")}
+          {t("components.tryAgain")}
         </button>
       </CommonHero>
     </main>

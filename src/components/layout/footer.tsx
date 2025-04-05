@@ -10,7 +10,7 @@ export const LayoutFooter: FC<LayoutFooterProps> = ({ ...rest }) => {
     <footer className="bg-base-200" {...rest}>
       <div className="container flex items-center justify-center">
         <span className="text-center text-sm">
-          {t("createdBy")}{" "}
+          {t("components.createdBy")}{" "}
           <a className="link link-accent link-hover" href="https://github.com/YaGRRusso" target="_blank">
             Yago Russo
           </a>
