@@ -87,7 +87,7 @@ function RouteComponent() {
         <div className="flex flex-wrap items-center justify-center gap-2">
           <a
             className="btn flex-1 btn-soft btn-info"
-            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Confira este Site: https://descubra-se-seu-cartao-vazou.netlify.app/")}`}
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Confira este Site: https://descubra-se-seu-cartao-vazou.netlify.app")}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -96,7 +96,7 @@ function RouteComponent() {
           </a>
           <a
             className="btn flex-1 btn-soft btn-success"
-            href={`https://wa.me/?text=${encodeURIComponent("Confira este Site: https://descubra-se-seu-cartao-vazou.netlify.app/")}`}
+            href={`https://wa.me/?text=${encodeURIComponent("Confira este Site: https://descubra-se-seu-cartao-vazou.netlify.app")}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -105,7 +105,7 @@ function RouteComponent() {
           </a>
           <a
             className="btn flex-1 btn-soft btn-info"
-            href={`https://t.me/share/url?url=${encodeURIComponent("https://descubra-se-seu-cartao-vazou.netlify.app/")}&text=${encodeURIComponent("Confira este Site!")}`}
+            href={`https://t.me/share/url?url=${encodeURIComponent("https://descubra-se-seu-cartao-vazou.netlify.app")}&text=${encodeURIComponent("Confira este Site!")}`}
             target="_blank"
             rel="noopener noreferrer"
           >
